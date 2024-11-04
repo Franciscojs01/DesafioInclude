@@ -1,35 +1,19 @@
-#unico-1 {
-  color: rgb(255, 247, 0);
+body {
+  /*background-image: url(/assets/handmade-pumpkins-halloween-style-illuminated-inside-lying-side-darkness.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  /*background: color image repeaat position/size */
+  background: url(/assets/handmade-pumpkins-halloween-style-illuminated-inside-lying-side-darkness.jpg)
+    no-repeat top center/cover;
 }
 
-.qualquer {
-  color: green;
-}
-
-p {
-  color: red;
-}
-
-header {
-    border: 1px solid red;
-
-    padding: 60px;
-}
-
-h1 {
-    border: 1px solid green;
-
-    height: 60px;
-}
-
-p {
-    margin: 20px;
-
-    border: 1px solid purple;
-    /*display: inline;*/
-}
-
-span {
-    border: 1px solid pink;
-    display: block;
+#container {
+  width: 360px;
+  height: 712px;
+  border: 1px solid gold;
+  margin: auto;
+  
 }
