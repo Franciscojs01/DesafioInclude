@@ -8,12 +8,15 @@ body {
   /*background: color image repeaat position/size */
   background: url(/assets/handmade-pumpkins-halloween-style-illuminated-inside-lying-side-darkness.jpg)
     no-repeat top center/cover;
+    
+  
 }
 
 #container {
   width: 360px;
   height: 712px;
-  border: 1px solid gold;
+  
   margin: auto;
   
 }
+
