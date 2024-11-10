@@ -1,0 +1,31 @@
+body {
+  background: #000;
+}
+#container{
+  background: #ffd700;
+}
+#social_links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social_links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social_links a:hover {
+  background: rgb(0, 0, 0);
+  padding: 16px;
+  border-radius: 50%;
+}
