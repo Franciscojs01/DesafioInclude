@@ -57,18 +57,16 @@ footer a:hover {  /*a cor relacionada a animação dentro dos links do rodapé*/
   text-align: center;
 }  
 
-.wolf {
-  
-  
-}
-
 .wolf_title {
   
+ 
+  
+  
+  text-align: center;
+  
+  color: #ffd700;
 }
 
-.wolf__subtitle {
-  
-}
 
 .wolf__image {
   position: absolute;

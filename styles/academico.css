@@ -1,0 +1,91 @@
+/* Define que todo elemento terá box-sizing como border-box, o que facilita o controle de layout e espaço */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para o corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte padrão */
+  line-height: 1.6; /* Define o espaçamento entre linhas */
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background-color: #4CAF50; /* Cor de fundo verde */
+  color: #fff; /* Cor do texto branca */
+  padding: 1rem; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Define o espaçamento inferior do título principal */
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para as seções */
+.section {
+  margin: 1.5rem; /* Margem em volta da seção */
+  padding: 1rem; /* Espaçamento interno */
+  border: 1px solid #ddd; /* Borda cinza clara */
+  border-radius: 5px; /* Arredonda os cantos */
+}
+
+/* Estilos para os títulos de cada seção */
+h2 {
+  margin-bottom: 0.5rem; /* Margem inferior do título */
+  color: #4CAF50; /* Cor verde */
+}
+
+/* Remove a marcação de lista padrão */
+ul {
+  list-style-type: none;
+}
+
+/* Define o espaçamento inferior para cada item de lista */
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para a área de texto */
+textarea {
+  width: 100%; /* Define largura total */
+  padding: 0.5rem; /* Espaçamento interno */
+  margin-top: 0.5rem; /* Margem superior */
+  border: 1px solid #ddd; /* Borda cinza clara */
+  border-radius: 4px; /* Arredonda os cantos */
+}
+
+/* Estilos para o botão */
+button {
+  display: block; /* Exibe o botão como um bloco */
+  margin-top: 0.5rem; /* Margem superior */
+  padding: 0.5rem 1rem; /* Espaçamento interno */
+  background-color: #4CAF50; /* Cor de fundo verde */
+  color: white; /* Cor do texto branca */
+  border: none; /* Remove a borda */
+  border-radius: 4px; /* Arredonda os cantos */
+  cursor: pointer; /* Muda o cursor para o ponteiro */
+}
+
+/* Efeito de hover no botão */
+button:hover {
+  background-color: #45a049; /* Muda a cor ao passar o mouse */
+}
+
+/* Estilos de responsividade para telas maiores que 600px */
+@media (min-width: 600px) {
+  .section {
+    max-width: 600px; /* Define uma largura máxima para as seções */
+    margin: 1.5rem auto; /* Centraliza a seção */
+  }
+}
+
+/* Estilos para o rodapé */
+footer {
+  text-align: center; /* Centraliza o texto */
+  padding: 1rem; /* Espaçamento interno */
+  background-color: #f4f4f4; /* Cor de fundo clara */
+  margin-top: 1rem; /* Margem superior */
+}
