@@ -5,7 +5,7 @@ function createPost() {
 
   if (!description || !imageUrl || !author) {
     alert("Por favor, preencha todos os campos.")
-    return
+    return undefined;
   }
 
   const postContainer = document.createElement("div")
