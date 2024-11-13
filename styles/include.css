@@ -1,5 +1,6 @@
 body {
   background: #000;
+  height: 200vh;
 }
 #include {
   position: absolute;
@@ -18,7 +19,7 @@ footer {  /*rodapé principal a estrutura que guarda as outras partes do rodapé
   padding: 65px 0;
   text-align: center;
   z-index: 100;
-
+  
 }  
 
 /*o que está dentro do rodapé*/
@@ -50,6 +51,7 @@ footer {  /*rodapé principal a estrutura que guarda as outras partes do rodapé
   background: rgb(0, 0, 0); /*a animação de passar o mouse e aparacer a bolinhas escura, por cima dos icones das redes*/
   padding: 5px;
   border-radius: 50%;
+  
 }
   
 footer a:hover {  /*a cor relacionada a animação dentro dos links do rodapé*/
@@ -57,15 +59,7 @@ footer a:hover {  /*a cor relacionada a animação dentro dos links do rodapé*/
   text-align: center;
 }  
 
-.wolf_title {
-  
- 
-  
-  
-  text-align: center;
-  
-  color: #ffd700;
-}
+
 
 
 .wolf__image {

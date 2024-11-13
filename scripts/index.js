@@ -1,9 +1,9 @@
-// Seleciona o botão de menu "hambúrguer" no documento HTML
-const hamburguer = document.querySelector(".hamburguer");
+var menuItem = document.querySelectorAll(".item-menu") // guarda todos elementos de item menu.
 
-// Seleciona o elemento de navegação que contém a lista de links
-const nav = document.querySelector(".nav");
+function selectLink() {
+  menuItem.forEach((item) => item.classList.remove("ativo"))
 
-// uma arrow function para quando clicar no botão hamburguer e for verdadeiro ele vai sumir e quando for falso ele vai permanecer lá
-hamburguer.addEventListener("click", () => nav.classList.toggle("active"));
-// Alterna a classe "active" no elemento de navegação ao clicar no botão
+  this.classList.add("ativo")
+}
+
+menuItem.forEach((item) => item.addEventListener("click", selectLink))
