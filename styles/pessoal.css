@@ -73,7 +73,7 @@ body {
 }
 
 .buttonMoon {
-  position: fixed; /* Fixa o botão na posição especificada */
+  position: absolute; /* Fixa o botão na posição especificada */
   top: 10px; /* Distância do topo da página */
   right: 10%; /* Distância da borda direita da página */
   width: 100px; /* Largura do botão */
@@ -98,3 +98,32 @@ body {
 
 }
 
+@media (max-width: 480px) {
+  .profile__titles,
+  .profile__subtitle {
+    font-size: 20px;
+  }
+
+  .profile__image {
+    font-size: 16px;
+  }
+
+  .profile__texto {
+    font-size: 14px;
+    padding: 10px;
+    left: 5%;
+    right: 5%;
+  }
+
+  .buttonMoon {
+    width: 60px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .textMoon h2 {
+    font-size: 16px;
+    left: 45%;
+    bottom: 92%;
+  }
+}

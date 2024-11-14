@@ -17,11 +17,13 @@ nav.menu-lateral {
   background-color: #ffd700;
   padding: 40px 0 40px 1%;
   box-shadow: 3px 0 0 #800080;
+  display:inline;
 
   position: fixed;
   top: 0;
   left: 0;
-  transition: 0.2s;
+  overflow: hidden;
+  transition: .2s;
 }
 
 nav.menu-lateral.expandir {
@@ -29,7 +31,7 @@ nav.menu-lateral.expandir {
 }
 
 .btn-expandir > i {
-  color: #000;
+  color: #800080;
   font-size: 24px;
   cursor: pointer;
 }
@@ -59,4 +61,13 @@ ul li.item-menu a {
   display: flex;
   margin-bottom: 20px;
   line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+  margin-left: 40px;
+}
+
+ul li.item-menu a .icon > i {
+  font-size: 30px;
+  margin-left: 10px;
 }

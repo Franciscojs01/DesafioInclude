@@ -12,49 +12,51 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <title>Desafio Include</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="/scripts/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
-    <header class="header">
-      <nav class="nav">
-        <div class="title">
-          🎃 Meu blog 🎃
-        </div>
-    </header>
-      <nav class="menu-lateral">
-      
-        <div class="btn-expandir">
-          <i class="bi bi-list"></i>
-        </div>
-        <ul>
-          <li class="item-menu ativo">
-            <a href="http://127.0.0.1:5500/pages/include.html" target="_blank">
-              Sobre Include
-            </a>
-          </li>
-          <li class="item-menu ">
-            <a href="http://127.0.0.1:5500/pages/academico.html" target="_blank">
-              Perfil Acadêmico
+    <nav class="menu-lateral">
+      <div class="btn-expandir">
+        <i class="bi bi-list" id="btn-exp"></i>
+      </div>
 
-            </a>
-          </li>
-          <li class="item-menu ">
-            <a href="http://127.0.0.1:5500/pages/pessoal.html" target="_blank">
-              Hobbys
+      <ul>
+        <li class="item-menu">
+          <a href="include.html" >
+            <span class="icon"><i class="fas fa-ghost"></i></span>
+            <span class="txt-link">Include Engenharia</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="academico.html">
+            <span class="icon"><i class="fas fa-skull-crossbones"></i></span>
+            <span class="txt-link">Perfil âcademico</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="pessoal.html">
+            <span class="icon"><i class="fas fa-hat-wizard"></i></span>
+            <span class="txt-link">Hobbys</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="post.html">
+            <span class="icon"><i class="fas fa-broom"></i></span>
+            <span class="txt-link">Criar Post</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-            </a>
-          </li>
-          <li class="item-menu ">
-            <a href="http://127.0.0.1:5500/pages/post.html" target="_blank">
-              Criar Post
-
-            </a>
-          </li>
-        </ul>
-      </nav>
-    
+    <script async src="../scripts/index.js"></script>
   </body>
 </html>
