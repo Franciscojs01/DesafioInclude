@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Jolly Lodger", system-ui;
 }
 
 /* Estilos para o corpo da página */
@@ -13,10 +14,11 @@ body {
 
 /* Estilos para o cabeçalho */
 header {
-  background-color: #4CAF50; /* Cor de fundo verde */
-  color: #fff; /* Cor do texto branca */
+  background-color: #ffd700; /* Cor de fundo verde */
+  color: #000; /* Cor do texto branca */
   padding: 1rem; /* Espaçamento interno */
   text-align: center; /* Centraliza o texto */
+  font-size: 20px;
 }
 
 /* Define o espaçamento inferior do título principal */
