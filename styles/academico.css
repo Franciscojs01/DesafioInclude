@@ -8,8 +8,9 @@
 
 /* Estilos para o corpo da página */
 body {
-  font-family: Arial, sans-serif; /* Define a fonte padrão */
   line-height: 1.6; /* Define o espaçamento entre linhas */
+  background: #000;
+  margin-bottom: 80px;
 }
 
 /* Estilos para o cabeçalho */
@@ -21,23 +22,134 @@ header {
   font-size: 20px;
 }
 
+.nav {
+  max-width: 1280px; /* Limita a largura máxima da navegação */
+  height: 70px; /* Define a altura da barra de navegação */
+  
+  display: flex; /* Usa flexbox para organização */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center /* Centraliza o conteúdo verticalmente */
+}
+
+nav.menu-lateral {
+  width: 80px;
+  height: 100%;
+  background-color: #ffd700;
+  padding: 40px 0 40px 1%;
+  box-shadow: 3px 0 0 #800080;
+  display:inline;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: .2s;
+}
+
+nav.menu-lateral.expandir {
+  width: 300px;
+}
+
+.btn-expandir > i {
+  color: #800080;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+ul {
+  height: 100%;
+  list-style-type: none;
+}
+
+ul li.item-menu {
+  transition: 0.2s;
+}
+
+ul li.ativo {
+  background-color: #000;
+}
+
+ul li.item-menu:hover {
+  background: #000;
+}
+
+ul li.item-menu a {
+  color: #800080;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+  margin-left: 40px;
+}
+
+ul li.item-menu a .icon > i {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
 /* Define o espaçamento inferior do título principal */
 h1 {
   margin-bottom: 0.5rem;
 }
 
+/* Estilos para o rodapé */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+  background-color: #ffd700; /* Cor do rodapé */
+  color: #000; /* Cor do texto */
+  padding: 40px 0;
+  text-align: center;
+  z-index: 100;
+}
+
+.footer-right {
+  position: absolute;
+  
+  right: 30%;
+  left: 30%;
+  bottom: 0%;
+  font-size: 30px;
+  padding: 20px;  
+  text-align: center;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+.footer-right a:hover {
+  background: rgb(0, 0, 0); /*a animação de passar o mouse e aparacer a bolinhas escura, por cima dos icones das redes*/
+  padding: 5px;
+  border-radius: 50%;
+  
+}
+  
+footer a:hover {  /*a cor relacionada a animação dentro dos links do rodapé*/
+  color: #800080;
+  text-align: center;
+}  
+
 /* Estilos para as seções */
 .section {
   margin: 1.5rem; /* Margem em volta da seção */
   padding: 1rem; /* Espaçamento interno */
-  border: 1px solid #ddd; /* Borda cinza clara */
+  border: 3px solid #800080; 
   border-radius: 5px; /* Arredonda os cantos */
+  background:#ffd700;
 }
 
 /* Estilos para os títulos de cada seção */
 h2 {
   margin-bottom: 0.5rem; /* Margem inferior do título */
-  color: #4CAF50; /* Cor verde */
+  color: #000; 
 }
 
 /* Remove a marcação de lista padrão */
@@ -50,44 +162,21 @@ ul li {
   margin-bottom: 0.5rem;
 }
 
-/* Estilos para a área de texto */
-textarea {
-  width: 100%; /* Define largura total */
-  padding: 0.5rem; /* Espaçamento interno */
-  margin-top: 0.5rem; /* Margem superior */
-  border: 1px solid #ddd; /* Borda cinza clara */
-  border-radius: 4px; /* Arredonda os cantos */
-}
-
-/* Estilos para o botão */
-button {
-  display: block; /* Exibe o botão como um bloco */
-  margin-top: 0.5rem; /* Margem superior */
-  padding: 0.5rem 1rem; /* Espaçamento interno */
-  background-color: #4CAF50; /* Cor de fundo verde */
-  color: white; /* Cor do texto branca */
-  border: none; /* Remove a borda */
-  border-radius: 4px; /* Arredonda os cantos */
-  cursor: pointer; /* Muda o cursor para o ponteiro */
-}
-
-/* Efeito de hover no botão */
-button:hover {
-  background-color: #45a049; /* Muda a cor ao passar o mouse */
-}
-
 /* Estilos de responsividade para telas maiores que 600px */
 @media (min-width: 600px) {
   .section {
     max-width: 600px; /* Define uma largura máxima para as seções */
     margin: 1.5rem auto; /* Centraliza a seção */
   }
+  footer {
+    position: fixed; /* Somente em telas menores */
+    bottom: 0;
+  }
+
+  .footer-right {
+    flex-direction: row; /* Garantir ícones centralizados em uma linha */
+    font-size: 20px; /* Reduz tamanho dos ícones em telas menores */
+  }
+
 }
 
-/* Estilos para o rodapé */
-footer {
-  text-align: center; /* Centraliza o texto */
-  padding: 1rem; /* Espaçamento interno */
-  background-color: #f4f4f4; /* Cor de fundo clara */
-  margin-top: 1rem; /* Margem superior */
-}
