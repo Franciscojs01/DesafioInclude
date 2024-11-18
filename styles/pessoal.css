@@ -1,3 +1,4 @@
+/* Reset e Configuração Geral */
 * {
   margin: 0;
   padding: 0;
@@ -6,84 +7,74 @@
 
 body {
   overflow-x: hidden;
-  font-family: "Inter", sans-serif;
+  font-family: "Jolly Lodger", system-ui;
   color: #ffd700;
-  background-color: #000;
+  background-color: #fffb00;
+  font-size: 20px;
 }
 
+/* Configuração do Background */
 #profile {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url("../assets/fundo2.0.png") 50% 50% / cover no-repeat;
+  background: url("../assets/fundo2.0.png") no-repeat center center fixed;
+  background-size: cover; /* Garante que o fundo preencha toda a tela */
 }
 
+/* Estilos do Container */
 .profile__me {
-  position: absolute; /* Absolute pra ficar em qualquer lugar da tela */
-  left: 50%; /* Meio da tela */
-  bottom: 0; /* Fica lá em baixo */
-  gap: 12px; /* Espaçamento entres as divs */
-  display: flex; /* Centraliza todos os itens ao meio */
-  align-items: center; /* Centraliza todos os itens ao meio */
-  justify-content: center; /* Centraliza todos os itens ao meio */
-  flex-direction: column; /* Deixa em coluna os itens */
-  transform: translate(-50%, -50%); /* Centraliza na tela */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
 }
 
-.profile__titles {
-  font-size: 30px; /* Tamanho da fonte */
-  text-align: center; /* Alinha o texto ao meio */
-  font-family: "Jolly Lodger", system-ui; /* Nome da fonte */
-  
-}
-
-.profile__subtitle {
-  font-size: 30px; /* Tamanho da fonte */
-  text-align: center; /* Alinha o texto ao meio */
-  font-family: "Jolly Lodger", system-ui; /* Nome da fonte */
+.profile__titles, .profile__subtitle {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Jolly Lodger", system-ui;
 }
 
 .profile__image {
-  gap: 12px; /* Espaçamento entres as divs */
-  font-size: 25px; /* Tamanho da fonte */
-  display: flex; /* Centraliza todos os itens ao meio */
-  align-items: center; /* Centraliza todos os itens ao meio */
-  justify-content: center; /* Centraliza todos os itens ao meio */
-  flex-direction: column; /* Deixa em coluna os itens */
+  gap: 12px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .profile__texto {
-  font-size: 20px; /* tamanho da fonte */
-  position: absolute; /*posição dos elementos do texto */
-  top: 67%; 
-  left: 30%;
-  right: 30%;
+  font-size: 20px;
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 0%;
   text-align: center;
-  text-justify: inter-word;
-  
-
   padding: 15px 24px;
-
-  
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgb(255, 251, 0);
   border-radius: 8px;
-
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
 
+/* Estilo do Botão */
 .buttonMoon {
-  position: absolute; /* Fixa o botão na posição especificada */
-  top: 10px; /* Distância do topo da página */
-  right: 10%; /* Distância da borda direita da página */
-  width: 100px; /* Largura do botão */
-  height: auto; /* Altura automática */
-  
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  width: 100px;
   cursor: pointer;
 }
 
 .imageButton img {
-  width: 100%; /* A imagem ocupará toda a largura do botão */
+  width: 100%;
   height: auto;
   border-radius: 6px;
   transition: transform 0.2s;
@@ -91,11 +82,40 @@ body {
 
 .textMoon h2 {
   position: absolute;
-  right: 0%;
   left: 75%;
   bottom: 85%;
   font-family: "Jolly Lodger", system-ui;
+}
 
+/* Responsividade */
+@media (max-width: 900px) {
+  .profile__titles,
+  .profile__subtitle {
+    font-size: 24px;
+  }
+
+  .profile__image {
+    top: 30%;
+    font-size: 20px;
+  }
+
+  .profile__texto {
+    font-size: 16px;
+    left: 10%;
+    right: 10%;
+  }
+
+  .buttonMoon {
+    width: 80px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .textMoon h2 {
+    font-size: 18px;
+    left: 70%;
+    bottom: 90%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -117,8 +137,8 @@ body {
 
   .buttonMoon {
     width: 60px;
-    bottom: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
   }
 
   .textMoon h2 {

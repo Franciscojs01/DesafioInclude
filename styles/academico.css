@@ -11,6 +11,7 @@ body {
   line-height: 1.6; /* Define o espaçamento entre linhas */
   background: #000;
   margin-bottom: 80px;
+  font-size: 20px;
 }
 
 /* Estilos para o cabeçalho */
@@ -25,10 +26,10 @@ header {
 .nav {
   max-width: 1280px; /* Limita a largura máxima da navegação */
   height: 70px; /* Define a altura da barra de navegação */
-  
+
   display: flex; /* Usa flexbox para organização */
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
 }
 
 nav.menu-lateral {
@@ -37,13 +38,13 @@ nav.menu-lateral {
   background-color: #ffd700;
   padding: 40px 0 40px 1%;
   box-shadow: 3px 0 0 #800080;
-  display:inline;
+  display: inline;
 
   position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 nav.menu-lateral.expandir {
@@ -97,59 +98,57 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-/* Estilos para o rodapé */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  
-  background-color: #ffd700; /* Cor do rodapé */
-  color: #000; /* Cor do texto */
+  position: absolute;
+  left: 60px;
+  display: flex;
+  width: calc(100% - 60px);
+  background-color: #ffd700;
+  color: #000;
   padding: 40px 0;
   text-align: center;
   z-index: 100;
+  align-items: center;
+  justify-content: center
 }
 
 .footer-right {
-  position: absolute;
-  
-  right: 30%;
-  left: 30%;
-  bottom: 0%;
   font-size: 30px;
-  padding: 20px;  
+  padding: 20px;
   text-align: center;
-
   transition: background 0.2s;
   border-radius: 50%;
 }
 
 .footer-right a:hover {
-  background: rgb(0, 0, 0); /*a animação de passar o mouse e aparacer a bolinhas escura, por cima dos icones das redes*/
+  background: rgb(
+    0,
+    0,
+    0
+); /*a animação de passar o mouse e aparacer a bolinhas escura, por cima dos icones das redes*/
   padding: 5px;
   border-radius: 50%;
-  
 }
-  
-footer a:hover {  /*a cor relacionada a animação dentro dos links do rodapé*/
+
+footer a:hover {
+  /*a cor relacionada a animação dentro dos links do rodapé*/
   color: #800080;
   text-align: center;
-}  
+}
 
 /* Estilos para as seções */
 .section {
   margin: 1.5rem; /* Margem em volta da seção */
   padding: 1rem; /* Espaçamento interno */
-  border: 3px solid #800080; 
+  border: 3px solid #800080;
   border-radius: 5px; /* Arredonda os cantos */
-  background:#ffd700;
+  background: #ffd700;
 }
 
 /* Estilos para os títulos de cada seção */
 h2 {
   margin-bottom: 0.5rem; /* Margem inferior do título */
-  color: #000; 
+  color: #000;
 }
 
 /* Remove a marcação de lista padrão */
@@ -162,21 +161,105 @@ ul li {
   margin-bottom: 0.5rem;
 }
 
-/* Estilos de responsividade para telas maiores que 600px */
+nav.menu-lateral {
+  width: 80px;
+  height: 100%;
+  background-color: #ffd700;
+  padding: 40px 0 40px 1%;
+  box-shadow: 3px 0 0 #800080;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+nav.menu-lateral.expandir {
+  width: 250px;
+}
+
+nav.menu-lateral ul {
+  padding: 0;
+  margin-top: 2rem;
+}
+
+nav.menu-lateral ul li.item-menu a .txt-link {
+  display: none; /* Esconde o texto no estado fechado */
+}
+
+nav.menu-lateral.expandir ul li.item-menu a .txt-link {
+  display: inline-block; /* Mostra o texto no estado expandido */
+}
+
+/* Conteúdo principal deslocado pelo menu */
+body {
+  margin-left: 80px; /* Largura do menu lateral */
+  transition: 0.3s;
+}
+
+nav.menu-lateral.expandir ~ body {
+  margin-left: 250px;
+}
+
+/* Botão de expandir */
+.btn-expandir {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+  nav.menu-lateral {
+    width: 60px;
+  }
+
+  nav.menu-lateral.expandir {
+    width: 200px;
+  }
+
+  body {
+    margin-left: 60px;
+  }
+
+  nav.menu-lateral.expandir ~ body {
+    margin-left: 200px;
+  }
+
+  .section {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 0.9rem; /* Reduz texto em telas menores */
+  }
+}
+
 @media (min-width: 600px) {
   .section {
     max-width: 600px; /* Define uma largura máxima para as seções */
     margin: 1.5rem auto; /* Centraliza a seção */
   }
+
   footer {
     position: fixed; /* Somente em telas menores */
     bottom: 0;
   }
 
   .footer-right {
-    flex-direction: row; /* Garantir ícones centralizados em uma linha */
     font-size: 20px; /* Reduz tamanho dos ícones em telas menores */
   }
-
 }
 
+@media (max-width: 600px) {
+  footer {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer-right {
+    flex-direction: column; /* Alinha ícones verticalmente */
+    font-size: 1rem;
+  }
+}
