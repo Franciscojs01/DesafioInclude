@@ -1,3 +1,4 @@
+/* Reset e estilo geral */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,11 @@ body {
   color: #ffd700;
   background-color: #fffb00;
   font-size: 20px;
+  display: flex; /* Define o body como flex container */
+  flex-direction: column; /* Organiza os filhos em coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  justify-content: center; /* Centraliza os elementos verticalmente */
+  height: 100vh; /* Garante que ocupe a altura total da tela */
 }
 
 /* Configuração do Background */
@@ -19,22 +25,29 @@ body {
   height: 100vh;
   background: url("../assets/fundo2.0.png") no-repeat center center fixed;
   background-size: cover; /* Garante que o fundo preencha toda a tela */
+  display: flex; /* Utiliza Flexbox */
+  flex-direction: column; /* Organiza os filhos em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  text-align: center; /* Centraliza o texto */
 }
 
 /* Estilos do Container */
-.profile__titles, .profile__subtitle {
+.profile__titles,
+.profile__subtitle {
   font-size: 30px;
   text-align: center;
   font-family: "Jolly Lodger", system-ui;
+  margin-bottom: 10px; /* Espaçamento entre os títulos */
 }
 
 .profile__image {
-  gap: 12px;
+  gap: 12px; /* Espaçamento entre elementos internos */
   font-size: 25px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  flex-direction: column; /* Organiza os elementos em coluna */
 }
 
 .profile__texto {
@@ -48,7 +61,7 @@ body {
   backdrop-filter: blur(4px); /* Efeito de desfoque no fundo */
   -webkit-backdrop-filter: blur(4px);
   max-width: 600px; /* Limita a largura do texto */
-  margin: 0 auto; /* Centraliza horizontalmente */
+  margin: 20px auto; /* Centraliza horizontalmente */
 }
 
 /* Estilo do Botão */
@@ -76,8 +89,15 @@ body {
 
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
-  .profile__titles, .profile__subtitle {
-    font-size: 24px; /* Reduz tamanho do título e subtítulo */
+  #profile {
+    justify-content: flex-start;
+    padding: 20px 10px; /* Adiciona espaçamento interno */
+  }
+
+  .profile__titles,
+  .profile__subtitle {
+    font-size: 21px; /* Reduz tamanho do título e subtítulo */
+    margin-bottom: 8px; /* Ajusta espaçamento entre títulos */
   }
 
   .profile__image {
@@ -88,18 +108,45 @@ body {
   .profile__texto {
     font-size: 16px; /* Reduz tamanho do texto */
     padding: 8px 10px; /* Ajusta o preenchimento interno */
-    max-width: 90%; /* Usa 90% da largura da tela */
+    max-width: 70%; /* Usa 90% da largura da tela */
+    margin: 10px auto; /* Centraliza com menos espaçamento */
   }
 
   .buttonMoon {
-    top: 5px; /* Ajusta a posição do botão */
+    top: 50px; /* Ajusta a posição do botão */
     right: 5%; /* Ajusta margem lateral */
     width: 80px; /* Reduz tamanho do botão */
   }
 
   .textMoon h2 {
     font-size: 16px; /* Reduz tamanho do texto */
-    left: 60%; /* Reposiciona horizontalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajuste preciso de centralização */
     bottom: 90%; /* Ajusta a distância do topo */
+  }
+}
+
+@media (max-width: 480px) {
+  #profile {
+    flex-direction: column; /* Garante organização em coluna */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Reduz preenchimento interno */
+  }
+
+  .profile__titles,
+  .profile__subtitle {
+    font-size: 20px; /* Títulos ainda menores */
+  }
+
+  .profile__texto {
+    font-size: 14px; /* Texto menor para telas pequenas */
+    padding: 6px 8px; /* Preenchimento interno reduzido */
+    max-width: 95%; /* Ocupar quase toda a largura da tela */
+  }
+
+  .buttonMoon {
+    top: 5px;
+    right: 5%;
+    width: 60px; /* Botão menor para telas menores */
   }
 }
