@@ -1,4 +1,3 @@
-/* Reset e estilo geral */
 * {
   margin: 0;
   padding: 0;
@@ -35,10 +34,10 @@ body {
 /* Estilos do Container */
 .profile__titles,
 .profile__subtitle {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   font-family: "Jolly Lodger", system-ui;
-  margin-bottom: 10px; /* Espaçamento entre os títulos */
+  margin-bottom: 0px; /* Espaçamento entre os títulos */
 }
 
 .profile__image {
@@ -67,8 +66,8 @@ body {
 /* Estilo do Botão */
 .buttonMoon {
   position: absolute;
-  top: 10px;
-  right: 10%;
+  top: 0px;
+  right: 0%;
   width: 100px;
   cursor: pointer;
 }
@@ -96,8 +95,8 @@ body {
 
   .profile__titles,
   .profile__subtitle {
-    font-size: 21px; /* Reduz tamanho do título e subtítulo */
-    margin-bottom: 8px; /* Ajusta espaçamento entre títulos */
+    font-size: 20px; /* Reduz tamanho do título e subtítulo */
+    margin-bottom: 9px; /* Ajusta espaçamento entre títulos */
   }
 
   .profile__image {
@@ -108,14 +107,14 @@ body {
   .profile__texto {
     font-size: 16px; /* Reduz tamanho do texto */
     padding: 8px 10px; /* Ajusta o preenchimento interno */
-    max-width: 70%; /* Usa 90% da largura da tela */
+    max-width: 70%; 
     margin: 10px auto; /* Centraliza com menos espaçamento */
   }
 
   .buttonMoon {
-    top: 50px; /* Ajusta a posição do botão */
-    right: 5%; /* Ajusta margem lateral */
-    width: 80px; /* Reduz tamanho do botão */
+    top: 50px; 
+    right: 5%; 
+    width: 80px; 
   }
 
   .textMoon h2 {
@@ -135,7 +134,7 @@ body {
 
   .profile__titles,
   .profile__subtitle {
-    font-size: 20px; /* Títulos ainda menores */
+    font-size: 10px; /* Títulos ainda menores */
   }
 
   .profile__texto {

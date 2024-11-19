@@ -16,77 +16,8 @@ body {
   padding-inline: 16px;
 }
 
-.nav {
-  max-width: 1280px; /* Limita a largura máxima da navegação */
-  height: 70px; /* Define a altura da barra de navegação */
-  
-  display: flex; /* Usa flexbox para organização */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center /* Centraliza o conteúdo verticalmente */
-}
-
 .title {
   font-size: 50px; /*aumenta o tamanho da fonte*/
 }
 
 
-nav.menu-lateral {
-  width: 80px;
-  height: 100%;
-  background-color: #ffd700;
-  padding: 40px 0 40px 1%;
-  box-shadow: 3px 0 0 #800080;
-  display:inline;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  transition: .2s;
-}
-
-nav.menu-lateral.expandir {
-  width: 300px;
-}
-
-.btn-expandir > i {
-  color: #800080;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-ul {
-  height: 100%;
-  list-style-type: none;
-}
-
-ul li.item-menu {
-  transition: 0.2s;
-}
-
-ul li.ativo {
-  background-color: #000;
-}
-
-ul li.item-menu:hover {
-  background: #000;
-}
-
-ul li.item-menu a {
-  color: #800080;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 20px 4%;
-  display: flex;
-  margin-bottom: 20px;
-  line-height: 40px;
-}
-
-ul li.item-menu a .txt-link {
-  margin-left: 40px;
-}
-
-ul li.item-menu a .icon > i {
-  font-size: 30px;
-  margin-left: 10px;
-}

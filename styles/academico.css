@@ -1,4 +1,4 @@
-/* Define que todo elemento terá box-sizing como border-box, o que facilita o controle de layout e espaço */
+
 * {
   box-sizing: border-box;
   margin: 0;
