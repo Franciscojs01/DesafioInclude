@@ -1,0 +1,69 @@
+.nav {
+  max-width: 1280px; /* Define uma largura máxima para o contêiner de navegação */
+  height: 70px; /* Altura fixa da barra de navegação */
+  
+  display: flex; /* Usa flexbox para organizar os itens dentro do contêiner */
+  justify-content: center; /* Centraliza horizontalmente os itens filhos dentro da barra */
+  align-items: center /* Centraliza verticalmente os itens filhos na barra */
+}
+
+nav.menu-lateral {
+  width: 80px; /* Define a largura inicial da barra lateral */
+  height: 100%; /* A altura ocupa 100% do contêiner pai */
+  background-color: #ffd700; /* Cor de fundo dourada para a barra lateral */
+  padding: 40px 0 40px 1%; /* Adiciona preenchimento interno (espaçamento) nos lados superior, inferior e esquerdo */
+  box-shadow: 3px 0 0 #800080; /* Adiciona uma sombra roxa à direita da barra lateral */
+  display: inline; /* Exibe o elemento como inline */
+  
+  position: fixed; /* Fixa a barra lateral na tela, não se move ao rolar */
+  top: 0; /* Alinha ao topo da tela */
+  left: 0; /* Alinha à esquerda da tela */
+  overflow: hidden; /* Esconde o conteúdo que excede os limites do contêiner */
+  transition: .2s; /* Adiciona uma transição suave para mudanças de largura */
+}
+
+nav.menu-lateral.expandir {
+  width: 300px; /* Define a largura da barra lateral quando está expandida */
+}
+
+.btn-expandir > i {
+  color: #800080; /* Define a cor do ícone do botão como roxa */
+  font-size: 24px; /* Define o tamanho do ícone do botão */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+ul {
+  height: 100%; /* A lista ocupa 100% da altura disponível */
+  list-style-type: none; /* Remove os marcadores padrão dos itens da lista */
+}
+
+ul li.item-menu {
+  transition: 0.2s; /* Aplica uma transição suave para mudanças de estilo */
+}
+
+ul li.ativo {
+  background-color: #000; /* Define o fundo preto para o item ativo da lista */
+}
+
+ul li.item-menu:hover {
+  background: #000; /* Define o fundo preto ao passar o mouse sobre os itens */
+}
+
+ul li.item-menu a {
+  color: #800080; /* Define a cor do texto do link como roxa */
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  font-size: 20px; /* Define o tamanho da fonte dos links */
+  padding: 20px 4%; /* Adiciona espaçamento interno nos lados superior, inferior, esquerdo e direito */
+  display: flex; /* Exibe os itens do link como flexíveis para organizar conteúdo interno */
+  margin-bottom: 20px; /* Adiciona um espaço entre os itens da lista */
+  line-height: 40px; /* Define a altura da linha para os itens do menu */
+}
+
+ul li.item-menu a .txt-link {
+  margin-left: 40px; /* Adiciona um espaço entre o texto do link e o ícone */
+}
+
+ul li.item-menu a .icon > i {
+  font-size: 30px; /* Define o tamanho dos ícones do menu */
+  margin-left: 10px; /* Adiciona um espaçamento à esquerda dos ícones */
+}

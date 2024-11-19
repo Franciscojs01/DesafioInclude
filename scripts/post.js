@@ -7,7 +7,7 @@ function createPost() {
   // Validar se todos os campos foram preenchidos
   if (!description || !imageUrl || !author) {
     alert("Por favor, preencha todos os campos.")
-    return
+    return;
   }
 
   // Criar o container do post

@@ -23,75 +23,7 @@ header {
   font-size: 20px;
 }
 
-.nav {
-  max-width: 1280px; /* Limita a largura máxima da navegação */
-  height: 70px; /* Define a altura da barra de navegação */
 
-  display: flex; /* Usa flexbox para organização */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-}
-
-nav.menu-lateral {
-  width: 80px;
-  height: 100%;
-  background-color: #ffd700;
-  padding: 40px 0 40px 1%;
-  box-shadow: 3px 0 0 #800080;
-  display: inline;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  transition: 0.2s;
-}
-
-nav.menu-lateral.expandir {
-  width: 300px;
-}
-
-.btn-expandir > i {
-  color: #800080;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-ul {
-  height: 100%;
-  list-style-type: none;
-}
-
-ul li.item-menu {
-  transition: 0.2s;
-}
-
-ul li.ativo {
-  background-color: #000;
-}
-
-ul li.item-menu:hover {
-  background: #000;
-}
-
-ul li.item-menu a {
-  color: #800080;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 20px 4%;
-  display: flex;
-  margin-bottom: 20px;
-  line-height: 40px;
-}
-
-ul li.item-menu a .txt-link {
-  margin-left: 40px;
-}
-
-ul li.item-menu a .icon > i {
-  font-size: 30px;
-  margin-left: 10px;
-}
 
 /* Define o espaçamento inferior do título principal */
 h1 {
@@ -161,53 +93,11 @@ ul li {
   margin-bottom: 0.5rem;
 }
 
-nav.menu-lateral {
-  width: 80px;
-  height: 100%;
-  background-color: #ffd700;
-  padding: 40px 0 40px 1%;
-  box-shadow: 3px 0 0 #800080;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  transition: 0.3s;
-  z-index: 1000;
-}
-
-nav.menu-lateral.expandir {
-  width: 250px;
-}
-
-nav.menu-lateral ul {
-  padding: 0;
-  margin-top: 2rem;
-}
-
-nav.menu-lateral ul li.item-menu a .txt-link {
-  display: none; /* Esconde o texto no estado fechado */
-}
-
-nav.menu-lateral.expandir ul li.item-menu a .txt-link {
-  display: inline-block; /* Mostra o texto no estado expandido */
-}
 
 /* Conteúdo principal deslocado pelo menu */
 body {
   margin-left: 80px; /* Largura do menu lateral */
   transition: 0.3s;
-}
-
-nav.menu-lateral.expandir ~ body {
-  margin-left: 250px;
-}
-
-/* Botão de expandir */
-.btn-expandir {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
 }
 
 /* Estilos para telas menores */
