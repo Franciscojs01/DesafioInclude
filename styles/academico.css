@@ -1,0 +1,155 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Jolly Lodger", system-ui;
+}
+
+/* Estilos para o corpo da página */
+body {
+  line-height: 1.6; /* Define o espaçamento entre linhas */
+  background: #000;
+  margin-bottom: 80px;
+  font-size: 20px;
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background-color: #ffd700; /* Cor de fundo verde */
+  color: #000; /* Cor do texto branca */
+  padding: 1rem; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  font-size: 20px;
+}
+
+
+
+/* Define o espaçamento inferior do título principal */
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  position: absolute;
+  left: 60px;
+  display: flex;
+  width: calc(100% - 60px);
+  background-color: #ffd700;
+  color: #000;
+  padding: 40px 0;
+  text-align: center;
+  z-index: 100;
+  align-items: center;
+  justify-content: center
+}
+
+.footer-right {
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+.footer-right a:hover {
+  background: rgb(
+    0,
+    0,
+    0
+); /*a animação de passar o mouse e aparacer a bolinhas escura, por cima dos icones das redes*/
+  padding: 5px;
+  border-radius: 50%;
+}
+
+footer a:hover {
+  /*a cor relacionada a animação dentro dos links do rodapé*/
+  color: #800080;
+  text-align: center;
+}
+
+/* Estilos para as seções */
+.section {
+  margin: 1.5rem; /* Margem em volta da seção */
+  padding: 1rem; /* Espaçamento interno */
+  border: 3px solid #800080;
+  border-radius: 5px; /* Arredonda os cantos */
+  background: #ffd700;
+}
+
+/* Estilos para os títulos de cada seção */
+h2 {
+  margin-bottom: 0.5rem; /* Margem inferior do título */
+  color: #000;
+}
+
+/* Remove a marcação de lista padrão */
+ul {
+  list-style-type: none;
+}
+
+/* Define o espaçamento inferior para cada item de lista */
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+
+/* Conteúdo principal deslocado pelo menu */
+body {
+  margin-left: 80px; /* Largura do menu lateral */
+  transition: 0.3s;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+  nav.menu-lateral {
+    width: 60px;
+  }
+
+  nav.menu-lateral.expandir {
+    width: 200px;
+  }
+
+  body {
+    margin-left: 60px;
+  }
+
+  nav.menu-lateral.expandir ~ body {
+    margin-left: 200px;
+  }
+
+  .section {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 0.9rem; /* Reduz texto em telas menores */
+  }
+}
+
+@media (min-width: 600px) {
+  .section {
+    max-width: 600px; /* Define uma largura máxima para as seções */
+    margin: 1.5rem auto; /* Centraliza a seção */
+  }
+
+  footer {
+    position: fixed; /* Somente em telas menores */
+    bottom: 0;
+  }
+
+  .footer-right {
+    font-size: 20px; /* Reduz tamanho dos ícones em telas menores */
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer-right {
+    flex-direction: column; /* Alinha ícones verticalmente */
+    font-size: 1rem;
+  }
+}

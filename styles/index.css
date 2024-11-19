@@ -1,35 +1,23 @@
-#unico-1 {
-  color: rgb(255, 247, 0);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jolly Lodger", system-ui;
 }
 
-.qualquer {
-  color: green;
+body {
+  height: 100vh;
+  background: center / cover no-repeat
+    url(/assets/handmade-pumpkins-halloween-style-illuminated-inside-lying-side-darkness.jpg);
 }
 
-p {
-  color: red;
+.header {
+  background: #ffd700;
+  padding-inline: 16px;
 }
 
-header {
-    border: 1px solid red;
-
-    padding: 60px;
+.title {
+  font-size: 50px; /*aumenta o tamanho da fonte*/
 }
 
-h1 {
-    border: 1px solid green;
 
-    height: 60px;
-}
-
-p {
-    margin: 20px;
-
-    border: 1px solid purple;
-    /*display: inline;*/
-}
-
-span {
-    border: 1px solid pink;
-    display: block;
-}

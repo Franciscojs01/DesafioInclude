@@ -1,0 +1,196 @@
+* {
+	margin: 0; /* Remove margens padrão */
+	padding: 0; /* Remove preenchimento padrão */
+	box-sizing: border-box; /* Inclui bordas e preenchimento no tamanho total */
+	font-family: "Jolly Lodger", system-ui; /* Define a fonte padrão */
+	color: #ffd700; /* Define a cor do texto como dourado */
+}
+
+/* Estilo do corpo da página */
+body {
+	display: flex; /* Usa Flexbox para alinhar os elementos filhos */
+	flex-direction: column; /* Organiza os elementos em coluna */
+	align-items: center; /* Centraliza horizontalmente */
+	justify-content: center; /* Centraliza verticalmente */
+}
+
+body,
+input,
+textarea {
+	background-color: #000; /* Define fundo preto para o corpo, campos de entrada e área de texto */
+}
+
+/* Título */
+.titulo {
+	position: relative; /* Define posição relativa para ajuste */
+	text-align: center; /* Centraliza o texto */
+	top: 20px; /* Ajusta a distância do topo */
+	font-size: 32px; /* Define o tamanho do texto */
+}
+
+/* Barra lateral de navegação */
+nav.menu-lateral {
+	width: 80px; /* Largura padrão da barra lateral */
+	height: 100vh; /* Altura total da janela */
+	background-color: #ffd700; /* Fundo dourado */
+	padding: 40px 0px 40px 1%; /* Espaçamento interno */
+	box-shadow: 3px 0 0 #800080; /* Sombra roxa à direita */
+
+	position: fixed; /* Fixa a barra lateral na tela */
+	top: 0; /* Alinha ao topo */
+	left: 0; /* Alinha à esquerda */
+	overflow: hidden; /* Esconde conteúdo excedente */
+	transition: 0.2s; /* Adiciona uma transição suave ao alterar largura */
+	z-index: 1; /* Define a barra lateral sobre outros elementos */
+}
+
+/* Estilo quando a barra lateral é expandida */
+nav.menu-lateral.expandir {
+	width: 300px; /* Largura da barra expandida */
+}
+
+/* Botão para expandir a barra lateral */
+.btn-expandir > i {
+	color: #800080; /* Cor roxa para o ícone */
+	font-size: 24px; /* Tamanho do ícone */
+	cursor: pointer; /* Mostra o cursor clicável */
+}
+
+/* Lista dentro da barra lateral */
+ul {
+	height: 100%; /* Ocupa toda a altura disponível */
+	list-style-type: none; /* Remove os marcadores padrão da lista */
+}
+
+/* Texto do link */
+.txt-link {
+	color: #800080; /* Define o texto dos links como roxo */
+}
+
+/* Estilo dos itens do menu */
+ul li.item-menu {
+	transition: 0.2s; /* Adiciona uma transição suave ao passar o mouse */
+}
+
+/* Estilo do item ativo */
+ul li.ativo {
+	background-color: #000; /* Fundo preto para o item ativo */
+}
+
+/* Estilo ao passar o mouse nos itens do menu */
+ul li.item-menu:hover {
+	background: #000; /* Fundo preto ao passar o mouse */
+}
+
+/* Links dentro do menu */
+ul li.item-menu a {
+	color: #800080; /* Texto roxo */
+	text-decoration: none; /* Remove sublinhado padrão */
+	font-size: 20px; /* Tamanho do texto */
+	padding: 20px 4%; /* Espaçamento interno */
+	display: flex; /* Organiza o conteúdo interno em linha */
+	margin-bottom: 20px; /* Espaçamento entre itens */
+	line-height: 40px; /* Altura das linhas */
+}
+
+/* Cor dos ícones */
+i {
+	color: #800080; /* Define ícones roxos */
+}
+
+/* Espaçamento entre texto do link e ícone */
+ul li.item-menu a .txt-link {
+	margin-left: 50px; /* Distância entre texto e ícone */
+}
+
+/* Contêiner do formulário */
+.form-container {
+	position: relative; /* Para posicionamento */
+	min-width: 300px; /* Largura mínima do formulário */
+	width: 60%; /* Ocupa 60% da largura disponível */
+	max-width: 600px; /* Largura máxima */
+	margin: 30px auto; /* Centraliza horizontalmente */
+	padding: 20px; /* Espaçamento interno */
+	border: 1px solid #800080; /* Borda roxa */
+	border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo dos rótulos */
+label {
+	display: block; /* Cada rótulo ocupa uma linha */
+	font-weight: bold; /* Negrito */
+}
+
+/* Estilo dos campos de entrada e área de texto */
+input,
+textarea {
+	width: 100%; /* Ocupam toda a largura disponível */
+	padding: 8px; /* Espaçamento interno */
+	margin-top: 5px; /* Espaçamento acima */
+}
+
+/* Botão de envio */
+.submit-btn {
+	padding: 10px 20px; /* Espaçamento interno */
+	background-color: #ffd700; /* Fundo dourado */
+	color: #800080; /* Texto roxo */
+	border: none; /* Remove a borda padrão */
+	border-radius: 5px; /* Bordas arredondadas */
+	cursor: pointer; /* Mostra o cursor clicável */
+}
+
+/* Estilo ao passar o mouse no botão */
+.submit-btn:hover {
+	background-color: #000; /* Fundo preto */
+	color: #ffd700; /* Texto dourado */
+}
+
+/* Contêiner dos posts */
+.post-container {
+	max-width: 800px; /* Largura máxima */
+	margin: 20px auto; /* Centraliza horizontalmente */
+	padding: 10px; /* Espaçamento interno */
+	border: 1px solid #ffd700; /* Borda dourada */
+	border-radius: 5px; /* Bordas arredondadas */
+	background-color: #111; /* Fundo cinza escuro */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+	.titulo {
+		font-size: 24px; /* Reduz o tamanho do título */
+		top: 10px; /* Ajusta distância do topo */
+	}
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+	.titulo {
+		font-size: 18px; /* Título ainda menor */
+		top: 5px; /* Menor distância do topo */
+	}
+}
+
+/* Ajustes na barra lateral para telas menores */
+@media (max-width: 768px) {
+	nav.menu-lateral {
+		width: 60px; /* Reduz a largura da barra lateral */
+	}
+
+	nav.menu-lateral.expandir {
+		width: 200px; /* Largura expandida reduzida */
+	}
+
+	ul li.item-menu a {
+		font-size: 16px; /* Tamanho menor para os links */
+	}
+
+	ul li.item-menu a .icon i {
+		font-size: 20px; /* Reduz tamanho dos ícones */
+	}
+
+	.form-container {
+		margin: 40px 10px; /* Margem ajustada para centralização */
+		padding: 15px; /* Preenchimento interno reduzido */
+	}
+}

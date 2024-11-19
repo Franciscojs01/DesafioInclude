@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Jolly Lodger", system-ui;
+  color: #ffd700;
+  background-color: #fffb00;
+  font-size: 20px;
+  display: flex; /* Define o body como flex container */
+  flex-direction: column; /* Organiza os filhos em coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  justify-content: center; /* Centraliza os elementos verticalmente */
+  height: 100vh; /* Garante que ocupe a altura total da tela */
+}
+
+/* Configuração do Background */
+#profile {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("../assets/fundo2.0.png") no-repeat center center fixed;
+  background-size: cover; /* Garante que o fundo preencha toda a tela */
+  display: flex; /* Utiliza Flexbox */
+  flex-direction: column; /* Organiza os filhos em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos do Container */
+.profile__titles,
+.profile__subtitle {
+  font-size: 25px;
+  text-align: center;
+  font-family: "Jolly Lodger", system-ui;
+  margin-bottom: 0px; /* Espaçamento entre os títulos */
+}
+
+.profile__image {
+  gap: 12px; /* Espaçamento entre elementos internos */
+  font-size: 25px;
+  display: flex;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  flex-direction: column; /* Organiza os elementos em coluna */
+}
+
+.profile__texto {
+  font-size: 18px; /* Reduz ligeiramente o tamanho do texto */
+  display: flex;
+  text-align: center;
+  padding: 10px 12px; /* Reduz o preenchimento interno */
+  border: 1px solid rgb(255, 251, 0); /* Borda amarela */
+  border-width: 1px; /* Define a largura da borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  backdrop-filter: blur(4px); /* Efeito de desfoque no fundo */
+  -webkit-backdrop-filter: blur(4px);
+  max-width: 600px; /* Limita a largura do texto */
+  margin: 20px auto; /* Centraliza horizontalmente */
+}
+
+/* Estilo do Botão */
+.buttonMoon {
+  position: absolute;
+  top: 0px;
+  right: 0%;
+  width: 100px;
+  cursor: pointer;
+}
+
+.imageButton img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.textMoon h2 {
+  position: absolute;
+  left: 75%;
+  bottom: 85%;
+  font-family: "Jolly Lodger", system-ui;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  #profile {
+    justify-content: flex-start;
+    padding: 20px 10px; /* Adiciona espaçamento interno */
+  }
+
+  .profile__titles,
+  .profile__subtitle {
+    font-size: 20px; /* Reduz tamanho do título e subtítulo */
+    margin-bottom: 9px; /* Ajusta espaçamento entre títulos */
+  }
+
+  .profile__image {
+    font-size: 20px; /* Reduz tamanho do texto relacionado à imagem */
+    gap: 8px; /* Reduz espaçamento interno */
+  }
+
+  .profile__texto {
+    font-size: 16px; /* Reduz tamanho do texto */
+    padding: 8px 10px; /* Ajusta o preenchimento interno */
+    max-width: 70%; 
+    margin: 10px auto; /* Centraliza com menos espaçamento */
+  }
+
+  .buttonMoon {
+    top: 50px; 
+    right: 5%; 
+    width: 80px; 
+  }
+
+  .textMoon h2 {
+    font-size: 16px; /* Reduz tamanho do texto */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajuste preciso de centralização */
+    bottom: 90%; /* Ajusta a distância do topo */
+  }
+}
+
+@media (max-width: 480px) {
+  #profile {
+    flex-direction: column; /* Garante organização em coluna */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Reduz preenchimento interno */
+  }
+
+  .profile__titles,
+  .profile__subtitle {
+    font-size: 10px; /* Títulos ainda menores */
+  }
+
+  .profile__texto {
+    font-size: 14px; /* Texto menor para telas pequenas */
+    padding: 6px 8px; /* Preenchimento interno reduzido */
+    max-width: 95%; /* Ocupar quase toda a largura da tela */
+  }
+
+  .buttonMoon {
+    top: 5px;
+    right: 5%;
+    width: 60px; /* Botão menor para telas menores */
+  }
+}
