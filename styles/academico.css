@@ -10,8 +10,9 @@
 body {
   line-height: 1.6; /* Define o espaçamento entre linhas */
   background: #000;
-  margin-bottom: 80px;
+  margin-bottom: 160px;
   font-size: 20px;
+
 }
 
 /* Estilos para o cabeçalho */
@@ -111,7 +112,7 @@ body {
   }
 
   body {
-    margin-left: 60px;
+    margin-left: 70px;
   }
 
   nav.menu-lateral.expandir ~ body {
