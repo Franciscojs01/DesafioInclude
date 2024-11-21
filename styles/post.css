@@ -152,7 +152,7 @@ textarea {
 	padding: 10px; /* Espaçamento interno */
 	border: 1px solid #ffd700; /* Borda dourada */
 	border-radius: 5px; /* Bordas arredondadas */
-	background-color: #111; /* Fundo cinza escuro */
+	background-color: #111; 
 }
 
 /* Responsividade para telas menores */
