@@ -16,8 +16,8 @@ body {
 
 /* Estilos para o cabeçalho */
 header {
-  background-color: #ffd700; /* Cor de fundo verde */
-  color: #000; /* Cor do texto branca */
+  background-color: #ffd700; 
+  color: #000; 
   padding: 1rem; /* Espaçamento interno */
   text-align: center; /* Centraliza o texto */
   font-size: 20px;
