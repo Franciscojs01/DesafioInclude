@@ -17,7 +17,7 @@ body {
   height: 100vh; /* Garante que ocupe a altura total da tela */
 }
 
-/* Configuração do Background */
+
 #profile {
   position: relative;
   width: 100vw;
@@ -31,7 +31,7 @@ body {
   text-align: center; /* Centraliza o texto */
 }
 
-/* Estilos do Container */
+
 .profile__titles,
 .profile__subtitle {
   font-size: 25px;
@@ -50,7 +50,7 @@ body {
 }
 
 .profile__texto {
-  font-size: 18px; /* Reduz ligeiramente o tamanho do texto */
+  font-size: 30px; /* Reduz ligeiramente o tamanho do texto */
   display: flex;
   text-align: center;
   padding: 10px 12px; /* Reduz o preenchimento interno */
@@ -72,18 +72,18 @@ body {
   cursor: pointer;
 }
 
-.imageButton img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  transition: transform 0.2s;
+.imageButton {
+  display: flex;
+  flex-direction: column; /* Organiza a imagem em coluna */
+  align-items: center; /* Centraliza os elementos */
+  gap: 10px; /* Espaçamento entre a imagem e o texto */
 }
 
 .textMoon h2 {
-  position: absolute;
-  left: 75%;
-  bottom: 85%;
+  font-size: 18px;
   font-family: "Jolly Lodger", system-ui;
+  text-align: center; 
+  margin-top: 8px; 
 }
 
 /* Responsividade para dispositivos móveis */
